@@ -1,0 +1,35 @@
+{
+  "name": "umi-plugin-checkList",
+  "version": "0.0.1",
+  "description": "frontend checkList",
+  "authors": {
+    "name": "symboler",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Symboler/umi-plugin-checkList.git"
+  },
+  "peerDependencies": {
+    "umi": "2.x",
+    "antd": "3.x"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "umi-tools build",
+    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
+  },
+  "devDependencies": {
+    "mustache": "3.0.1",
+    "np": "^3.0.4",
+    "umi-tools": "*"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "umiTools":{
+    "browserFiles":["src/utils.js"]
+  },
+  "license": "MIT"
+}
