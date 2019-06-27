@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-checklist",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "frontend checkList",
   "authors": {
     "name": "symboler",
@@ -28,8 +28,10 @@
     "lib",
     "src"
   ],
-  "umiTools":{
-    "browserFiles":["src/utils.js"]
+  "umiTools": {
+    "browserFiles": [
+      "src/utils.js"
+    ]
   },
   "license": "MIT"
 }
