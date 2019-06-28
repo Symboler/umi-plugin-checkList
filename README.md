@@ -18,7 +18,7 @@ export default {
 ```
 use in react component
 ```js
-import { goodJob } from 'umi';
+import { goodJob } from 'umi-plugin-checklist';
 
 @goodJob(['检查入参'],componentName)   // componentName is not required 
 class componentA extends React.Component{
