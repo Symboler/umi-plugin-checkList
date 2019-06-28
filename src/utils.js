@@ -39,7 +39,7 @@ if (isDev) {
  * @param {*} callback
  */
 
-export function check_update({ path, checkList }, callback) {
+function check_update({ path, checkList }, callback) {
     const request = db
       .transaction(['checkList_table'], 'readwrite')
       .objectStore('checkList_table')
@@ -62,7 +62,7 @@ export function check_update({ path, checkList }, callback) {
  * @param {*} param1
  */
 
-export function check_onCheckChange(e, { prevCheckList, currentCheckList, key, label }) {
+function check_onCheckChange(e, { prevCheckList, currentCheckList, key, label }) {
   const nextState = { ...currentCheckList };
   nextState[key][label] = !!e.target.checked;
   const { pathname: path } = window.location;
@@ -110,12 +110,12 @@ function funDownload(data) {
   }
 
 // 导出数据
-export function check_export(){
+function check_export(){
     readAll(funDownload)
 }
 
 // 重置数据
-export function check_resetData(callback){
+function check_resetData(callback){
     const request =  db.transaction(['checkList_table'], 'readwrite')
     .objectStore('checkList_table')
     .clear()
@@ -131,7 +131,7 @@ export function check_resetData(callback){
 }
 
 // 导入数据
-export function check_importData(file,callback) {
+function check_importData(file,callback) {
   if (window.FileReader) {
     const fr = new FileReader();
     /* eslint-disable */
@@ -171,7 +171,7 @@ export function check_importData(file,callback) {
  * @param {*} param0
  * @param {*} checkList
  */
-export function check_showModal(callback) {
+function check_showModal(callback) {
 
 const {pathname} = window.location
   const request = db
@@ -193,7 +193,7 @@ request.onsuccess = function success() {
  * 删除表数据
  * @param {*删除数据的主键，取页面的pathname} path
  */
-export function remove(path) {
+function remove(path) {
   const request = db
     .transaction(['checkList_table'], 'readwrite')
     .objectStore('checkList_table')
@@ -278,7 +278,7 @@ function checkAndUpdate({ path, checkListForComponent, componentName }) {
  * 给公共组件绑定checkList
  * @param {公共组件的checkList} checkList
  */
-export function goodJob(checkList,customName) {
+function goodJob(checkList,customName) {
   if (isDev) {
     return function(WrappedComponent) {
       return class extends Component {
@@ -321,3 +321,15 @@ function transformCheckList(name, checkList = []) {
   });
   return { [name]: newList };
 }
+
+
+module.exports = {
+    check_update,
+    check_onCheckChange,
+    check_export,
+    check_resetData,
+    check_importData,
+    goodJob,
+    check_showModal,
+    remove
+  };

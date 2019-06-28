@@ -7,13 +7,6 @@ const isDev = process.env.NODE_ENV === 'development';
 
 export default (api, options) => {
   const { paths } = api;
-  const checkListPath = require.resolve('./utils');
-  api.addUmiExports([
-    {
-      source: checkListPath,
-      exportAll: true,
-    },
-  ]);
   if(!isDev){
     return 
   }

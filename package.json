@@ -6,10 +6,16 @@
     "name": "symboler",
     "email": ""
   },
+  "browser": {
+    "./lib/index.js": "./lib/utils.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Symboler/umi-plugin-checkList.git"
   },
+  "keywords": [
+    "umi"
+  ],
   "peerDependencies": {
     "umi": "2.x",
     "antd": "3.x"

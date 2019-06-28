@@ -1,7 +1,7 @@
 import React ,{Fragment}from 'react';
 import {Drawer,Button,Icon,Checkbox,Upload} from '{{libraryName}}'
 
-import {check_showModal,check_update,check_resetData,check_export,check_importData} from 'umi'
+import {check_showModal,check_update,check_resetData,check_export,check_importData} from 'umi-plugin-checklist'
 
 class CheckListWrap extends React.Component{
  state={
