@@ -323,7 +323,7 @@ function transformCheckList(name, checkList = []) {
 }
 
 
-module.exports = {
+export {
     check_update,
     check_onCheckChange,
     check_export,
