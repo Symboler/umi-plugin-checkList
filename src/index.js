@@ -3,6 +3,7 @@
 import { join } from 'path';
 import { readFileSync, writeFileSync } from 'fs';
 import Mustache from 'mustache';
+const isDev = process.env.NODE_ENV === 'development';
 
 export default (api, options) => {
   const { paths } = api;
@@ -13,6 +14,9 @@ export default (api, options) => {
       exportAll: true,
     },
   ]);
+  if(!isDev){
+    return 
+  }
   const { libraryName = 'antd' } = options;
   if (!['antd', 'dtd', 'dtd-loose'].includes(libraryName)) {
     console.error('this plugin only support antd,dtd,or dtd-loose');

@@ -280,7 +280,6 @@ function checkAndUpdate({ path, checkListForComponent, componentName }) {
  */
 export function goodJob(checkList,customName) {
   if (isDev) {
-    /* eslint-disable */
     return function(WrappedComponent) {
       return class extends Component {
         componentDidMount() {
@@ -299,7 +298,7 @@ export function goodJob(checkList,customName) {
       };
     };
   }
-  return function() {};
+  return function(WrappedComponent) {return WrappedComponent};
 }
 
 
