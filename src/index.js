@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync } from 'fs';
 import Mustache from 'mustache';
 const isDev = process.env.NODE_ENV === 'development';
 
-export default (api, options) => {
+export default (api, options={}) => {
   const { paths } = api;
   if(!isDev){
     return 
