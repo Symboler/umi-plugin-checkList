@@ -4,7 +4,7 @@
 [![NPM downloads](http://img.shields.io/npm/dm/umi-plugin-checklist.svg?style=flat)](https://npmjs.org/package/umi-plugin-checklist)
 
 frontend checkList
-开发环境下，通过InnerDB在ui界面上实现前端组件级的checklist展示及状态更新，支持数据导入导出。
+开发环境下，通过InnerDB在ui界面上实现前端组件级的checklist展示及状态更新，支持数据导入导出。(浏览器需支持innerDB)
 
 ## Usage
 
