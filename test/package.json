@@ -1,45 +1,44 @@
 {
-    "name": "umi-plugin-checklist-loose",
-    "version": "0.0.1",
-    "description": "frontend checkList",
-    "authors": {
-      "name": "symboler",
-      "email": ""
-    },
-    "browser": {
-      "./lib/index.js": "./lib/utils.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/Symboler/umi-plugin-checkList.git"
-    },
-    "keywords": [
-      "umi"
-    ],
-    "peerDependencies": {
-      "umi": "2.x",
-      "antd": "3.x"
-    },
-    "main": "lib/index.js",
-    "scripts": {
-      "build": "umi-tools build",
-      "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
-    },
-    "devDependencies": {
-      "mustache": "3.0.1",
-      "np": "^3.0.4",
-      "umi-tools": "*"
-    },
-    "files": [
-      "lib",
-      "src",
-      "template"
-    ],
-    "umiTools": {
-      "browserFiles": [
-        "src/utils.js"
-      ]
-    },
-    "license": "MIT"
-  }
-  
+  "name": "umi-plugin-checklist-loose",
+  "version": "0.0.2",
+  "description": "frontend checkList",
+  "authors": {
+    "name": "symboler",
+    "email": ""
+  },
+  "browser": {
+    "./lib/index.js": "./lib/utils.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Symboler/umi-plugin-checkList.git"
+  },
+  "keywords": [
+    "umi"
+  ],
+  "peerDependencies": {
+    "umi": "2.x",
+    "antd": "3.x"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "umi-tools build",
+    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
+  },
+  "devDependencies": {
+    "mustache": "3.0.1",
+    "np": "^3.0.4",
+    "umi-tools": "*"
+  },
+  "files": [
+    "./lib",
+    "./src",
+    "./template"
+  ],
+  "umiTools": {
+    "browserFiles": [
+      "./src/utils.js"
+    ]
+  },
+  "license": "MIT"
+}
