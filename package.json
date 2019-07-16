@@ -23,7 +23,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "umi-tools build",
-    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
+    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish",
+    "pub:outer": "npm run build && npm publish ./test --registry https://registry.npmjs.org"
   },
   "devDependencies": {
     "mustache": "3.0.1",
